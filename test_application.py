@@ -8,6 +8,7 @@ from application import *
 
 # Functions
 def test_get_os(mocker):  # must import 'mocker' as parameter
+    # mock slow function and always return True
     mocker.patch("application.is_windows", return_value = True) # mock function
     assert get_operating_system() == "Windows"
 
