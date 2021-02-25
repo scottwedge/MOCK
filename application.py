@@ -1,4 +1,5 @@
 # application.py 
+# from https://medium.com/analytics-vidhya/mocking-in-python-with-pytest-mock-part-i-6203c8ad3606
 
 from time import sleep  
 
