@@ -20,6 +20,9 @@ def get_rand_max(min):
     max = random.randint(min, MAX) # value must be between min and MAX
     return max
 
+def test_greater_than_get_rand_min():
+    assert get_rand_min() > 1
+
 def main():
     print() # blank line
     min = get_rand_min()
