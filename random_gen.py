@@ -23,6 +23,10 @@ def get_rand_max(min):
 def test_greater_than_get_rand_min():
     assert get_rand_min() > 1
 
+def test_equal_get_rand_min(mocker):
+    mocker.patch("random_gen.get_rand_min", return_value = 100)
+    assert get_rand_min() == 100
+
 def main():
     print() # blank line
     min = get_rand_min()
