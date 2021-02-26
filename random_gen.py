@@ -24,8 +24,16 @@ def test_greater_than_get_rand_min():
     assert get_rand_min() > 1
 
 def test_equal_get_rand_min(mocker):
-    mocker.patch("random_gen.get_rand_min", return_value = 100)
-    assert get_rand_min() == 100
+    mocker.patch("random_gen.get_rand_min", return_value = 98)
+    assert get_rand_min() == 98
+
+def get_input():
+    result = input("Enter any input: ")
+    return result
+
+def test_get_input(mocker):
+    mocker.patch("random_gen.get_input", return_value = "ooo")
+    assert get_input() == "ooo"
 
 def main():
     print() # blank line
@@ -35,6 +43,8 @@ def main():
     print("Max = {}".format(max))
     num = get_random(min, max)
     print("Random number between {} and {} is {}.".format(min, max, num))
+    result = get_input()
+    print("******** user input = {}".format(result))
 
 
 # Main code
